@@ -1,16 +1,19 @@
-# rEFInd theme Regular
+# rEFInd theme Draculawave
 
-A simplistic clean and minimal theme for [rEFInd](https://www.rodsbooks.com/refind/index.html)
+### This is a stub with my messy changes to finetune it for my usecase
 
-NOTE: this is a fork of [munlik's theme](https://github.com/munlik/refind-theme-regular) since he seems to have abandoned his project, he didn't answer to (my) PRs on github for years.
+
+A N•A•T•O•W•A•V•E inspired theme for [rEFInd](https://www.rodsbooks.com/refind/index.html)
+
+NOTE: this is a fork of [refind-theme-regular](https://github.com/bobafetthotmail/refind-theme-regular) with my messy changes for my own personal usecase of a completely dracula themed setup of Pop!_OS with a hint of natowave.
 
  **press F10 to take screenshot**
  
 (default settings)
-![Screenshot 01](https://raw.githubusercontent.com/bobafetthotmail/refind-theme-regular/master/src/white_theme.png )
+![Screenshot 01](https://raw.githubusercontent.com/fhoekstra/refind-theme-draculawave/master/src/white_theme.png )
 
 (dark theme selected)
-![Screenshot 02](https://raw.githubusercontent.com/bobafetthotmail/refind-theme-regular/master/src/dark_theme.png)
+![Screenshot 02](https://raw.githubusercontent.com/fhoekstra/refind-theme-draculawave/master/src/dark_theme.png)
 
 
 
@@ -18,23 +21,23 @@ NOTE: this is a fork of [munlik's theme](https://github.com/munlik/refind-theme-
 
 1. Just paste this command in your terminal and enter your choices.
    ```
-   sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/bobafetthotmail/refind-theme-regular/master/install.sh)"
+   sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/fhoekstra/refind-theme-draculawave/master/install.sh)"
    ```
-2. To further adjust icon size, font size, background color and selector color edit `/boot/efi/EFI/refind/themes/refind-theme-regular/theme.conf` as root/SuperUser.
+2. To further adjust icon size, font size, background color and selector color edit `/boot/efi/EFI/refind/themes/refind-theme-draculawave/theme.conf` as root/SuperUser.
 
 ### Installation [Manual]:
 
 1. Clone git repository to your `$HOME` directory.
    ```
-   git clone https://github.com/bobafetthotmail/refind-theme-regular.git
+   git clone https://github.com/fhoekstra/refind-theme-draculawave.git
    ```
 
 2. Remove unused directories and files.
    ```
-   sudo rm -rf refind-theme-regular/{src,.git}
+   sudo rm -rf refind-theme-draculawave/{src,.git}
    ```
    ```
-   sudo rm refind-theme-regular/install.sh
+   sudo rm refind-theme-draculawave/install.sh
    ```
 
 3. Locate refind directory under EFI partition. For most Linux based system is commonly `/boot/efi/EFI/refind/`. Copy theme directory to it. Here, we will copy it to `themes` subdirectory inside refind.
@@ -42,22 +45,22 @@ NOTE: this is a fork of [munlik's theme](https://github.com/munlik/refind-theme-
    **Important:** Delete older installed versions of this theme before you proceed any further.
 
    ```
-   sudo rm -rf /boot/efi/EFI/refind/{regular-theme,refind-theme-regular}
-   sudo rm -rf /boot/efi/EFI/refind/themes/{regular-theme,refind-theme-regular}
+   sudo rm -rf /boot/efi/EFI/refind/{regular-theme,refind-theme-draculawave}
+   sudo rm -rf /boot/efi/EFI/refind/themes/{regular-theme,refind-theme-draculawave}
    ```
    ```
    sudo mkdir -p /boot/efi/EFI/refind/themes
    ```
    ```
-   sudo cp -r refind-theme-regular /boot/efi/EFI/refind/themes/
+   sudo cp -r refind-theme-draculawave /boot/efi/EFI/refind/themes/
    ```
 
 4. To adjust icon size, font size, background color and selector color edit `theme.conf`.
    ```
-   sudo vi /boot/efi/EFI/refind/themes/refind-theme-regular/theme.conf
+   sudo vi /boot/efi/EFI/refind/themes/refind-theme-draculawave/theme.conf
    ```
 
-5. To enable the theme add `include themes/refind-theme-regular/theme.conf` at the end of `refind.conf`, and comment out or delete any other themes you might have installed.
+5. To enable the theme add `include themes/refind-theme-draculawave/theme.conf` at the end of `refind.conf`, and comment out or delete any other themes you might have installed.
    ```
    sudo vi /boot/efi/EFI/refind/refind.conf
 

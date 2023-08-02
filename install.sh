@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-# An installer for refind-theme-regular by Munlik
+# An installer for refind-theme-draculawave by Munlik
 
 #Check if root
 [[ $EUID -ne 0 ]] && echo "This script must be run as root." && exit 1
@@ -16,10 +16,10 @@ then
 fi
 
 #Clone the theme
-theme_source_directory=$(mktemp -d -t refind-theme-regular-XXXXXX)
+theme_source_directory=$(mktemp -d -t refind-theme-draculawave-XXXXXX)
 cd "${theme_source_directory}"
-echo -n "Downloading rEFInd theme Regular to ${theme_source_directory}"
-git clone https://github.com/bobafetthotmail/refind-theme-regular.git &> /dev/null
+echo -n "Downloading rEFInd theme Draculawave to ${theme_source_directory}"
+git clone https://github.com/fhoekstra/refind-theme-draculawave.git &> /dev/null
 echo " - [DONE]"
 
 #Useful formatting tags
@@ -98,33 +98,33 @@ echo "Selected theme - ${bold}$theme_name${normal}"
 echo
 #Uncomment relevant lines from src/theme.conf
 echo -n "Generating theme file theme.conf"
-cd refind-theme-regular
+cd refind-theme-draculawave
 cp src/theme.conf theme.conf
-sed -i "s/#icons_dir themes\/refind-theme-regular\/icons\/$size_big-$size_small/icons_dir themes\/refind-theme-regular\/icons\/$size_big-$size_small/" theme.conf
+sed -i "s/#icons_dir themes\/refind-theme-draculawave\/icons\/$size_big-$size_small/icons_dir themes\/refind-theme-draculawave\/icons\/$size_big-$size_small/" theme.conf
 sed -i "s/#big_icon_size $size_big/big_icon_size $size_big/" theme.conf
 sed -i "s/#small_icon_size $size_small/small_icon_size $size_small/" theme.conf
-sed -i "s/#banner themes\/refind-theme-regular\/icons\/$size_big-$size_small\/bg$theme_path.png/banner themes\/refind-theme-regular\/icons\/$size_big-$size_small\/bg$theme_path.png/" theme.conf
-sed -i "s/#selection_big themes\/refind-theme-regular\/icons\/$size_big-$size_small\/selection$theme_path-big.png/selection_big themes\/refind-theme-regular\/icons\/$size_big-$size_small\/selection$theme_path-big.png/" theme.conf
-sed -i "s/#selection_small themes\/refind-theme-regular\/icons\/$size_big-$size_small\/selection$theme_path-small.png/selection_small themes\/refind-theme-regular\/icons\/$size_big-$size_small\/selection$theme_path-small.png/" theme.conf
+# sed -i "s/#banner themes\/refind-theme-draculawave\/icons\/$size_big-$size_small\/bg$theme_path.png/banner themes\/refind-theme-draculawave\/icons\/$size_big-$size_small\/bg$theme_path.png/" theme.conf
+sed -i "s/#selection_big themes\/refind-theme-draculawave\/icons\/$size_big-$size_small\/selection$theme_path-big.png/selection_big themes\/refind-theme-draculawave\/icons\/$size_big-$size_small\/selection$theme_path-big.png/" theme.conf
+sed -i "s/#selection_small themes\/refind-theme-draculawave\/icons\/$size_big-$size_small\/selection$theme_path-small.png/selection_small themes\/refind-theme-draculawave\/icons\/$size_big-$size_small\/selection$theme_path-small.png/" theme.conf
 cd ..
 echo " - [DONE]"
 
 #Clean up
 echo -n "Removing unused directories"
-rm -rf refind-theme-regular/{src,.git}
-rm -rf refind-theme-regular/install.sh
+rm -rf refind-theme-draculawave/{src,.git}
+rm -rf refind-theme-draculawave/install.sh
 echo " - [DONE]"
 
 #Remove previous installs
 echo -n "Deleting older installed versions (if any)"
-rm -rf "${refind_dir}"/{regular-theme,refind-theme-regular}
-rm -rf "${refind_dir}"/themes/{regular-theme,refind-theme-regular}
+rm -rf "${refind_dir}"/{regular-theme,refind-theme-draculawave}
+rm -rf "${refind_dir}"/themes/{regular-theme,refind-theme-draculawave}
 echo " - [DONE]"
 
 #Copy theme setup folders
 echo -n "Copying theme to ${refind_dir}/themes"
 mkdir -p "${refind_dir}/themes"
-cp -r refind-theme-regular "${refind_dir}/themes"
+cp -r refind-theme-draculawave "${refind_dir}/themes"
 echo " - [DONE]"
 
 #Edit refind.conf - remove older themes
@@ -159,7 +159,7 @@ echo " - [DONE]"
 echo -n "Updating refind.conf"
 echo "
 # Load rEFInd theme Regular
-include themes/refind-theme-regular/theme.conf" | tee -a "${refind_dir}"/refind.conf &> /dev/null
+include themes/refind-theme-draculawave/theme.conf" | tee -a "${refind_dir}"/refind.conf &> /dev/null
 echo " - [DONE]"
 
 #Clean up - remove download
