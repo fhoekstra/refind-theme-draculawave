@@ -3,7 +3,7 @@
 ### This is a stub with my messy changes to finetune it for my usecase
 
 
-A N•A•T•O•W•A•V•E inspired theme for [rEFInd](https://www.rodsbooks.com/refind/index.html)
+A ` N A T O W A V E ` inspired theme for [rEFInd](https://www.rodsbooks.com/refind/index.html)
 
 NOTE: this is a fork of [refind-theme-regular](https://github.com/bobafetthotmail/refind-theme-regular) with my messy changes for my own personal usecase of a completely dracula themed setup of Pop!_OS with a hint of natowave.
 
