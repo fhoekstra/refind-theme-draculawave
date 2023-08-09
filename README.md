@@ -9,12 +9,7 @@ NOTE: this is a fork of [refind-theme-regular](https://github.com/bobafetthotmai
 
  **press F10 to take screenshot**
  
-(default settings)
-![Screenshot 01](https://raw.githubusercontent.com/fhoekstra/refind-theme-draculawave/master/src/white_theme.png )
-
-(dark theme selected)
-![Screenshot 02](https://raw.githubusercontent.com/fhoekstra/refind-theme-draculawave/master/src/dark_theme.png)
-
+[[screenshots missing]]
 
 
 ### Installation [Quick]:
