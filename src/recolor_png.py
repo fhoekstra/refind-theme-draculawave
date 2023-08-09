@@ -14,7 +14,7 @@ import numpy as np
 
 CUSTOM_RGB = (255, 121, 198)
 LUT_PATTERN = 'ccw'  # 3 letters out of {'b', 'c', 'w'}, 'bcw' works best for normal pictures, but for fonts I found I had to use 'ccw'
-
+DARK_THEME = True  # If True, inverts the CUSTOM_RGB because something in refind inverts it when we go dark
 
 def main():
     img_path, out_path = parse_args()
@@ -73,6 +73,8 @@ def get_lut():
 
 def color():
     bgr = CUSTOM_RGB[2], CUSTOM_RGB[1], CUSTOM_RGB[0]
+    if DARK_THEME:
+        bgr = [255-x for x in bgr]  # Invert color because dark theme inverts it
     return np.full((1, 1, 3), bgr, np.uint8)
 
 
