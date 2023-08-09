@@ -72,30 +72,30 @@ echo
 echo "Selected size - ${bold}big icons: $size_big px, small icons: $size_small px${normal}"
 echo
 
-#Set theme color
-echo "Select a theme color"
-read -p "${bold}1: light${normal}, 2: dark: " theme_select
-if test -z "$theme_select";
-then
-    theme_select=1
-fi
-case "$theme_select" in
-    1)
-        theme_name="light"
-        theme_path=""
-        ;;
-    2)
+# #Set theme color
+# echo "Select a theme color"
+# read -p "${bold}1: light${normal}, 2: dark: " theme_select
+# if test -z "$theme_select";
+# then
+#     theme_select=1
+# fi
+# case "$theme_select" in
+#     1)
+#         theme_name="light"
+#         theme_path=""
+#         ;;
+#     2)
         theme_name="dark"
         theme_path="_dark"
-        ;;
-    *)
-        echo "Incorrect choice. Exiting."
-        exit 1
-        ;;
-esac
-echo
-echo "Selected theme - ${bold}$theme_name${normal}"
-echo
+#         ;;
+#     *)
+#         echo "Incorrect choice. Exiting."
+#         exit 1
+#         ;;
+# esac
+# echo
+# echo "Selected theme - ${bold}$theme_name${normal}"
+# echo
 #Uncomment relevant lines from src/theme.conf
 echo -n "Generating theme file theme.conf"
 cd refind-theme-draculawave
@@ -103,7 +103,7 @@ cp src/theme.conf theme.conf
 sed -i "s/#icons_dir themes\/refind-theme-draculawave\/icons\/$size_big-$size_small/icons_dir themes\/refind-theme-draculawave\/icons\/$size_big-$size_small/" theme.conf
 sed -i "s/#big_icon_size $size_big/big_icon_size $size_big/" theme.conf
 sed -i "s/#small_icon_size $size_small/small_icon_size $size_small/" theme.conf
-# sed -i "s/#banner themes\/refind-theme-draculawave\/icons\/$size_big-$size_small\/bg$theme_path.png/banner themes\/refind-theme-draculawave\/icons\/$size_big-$size_small\/bg$theme_path.png/" theme.conf
+#sed -i "s/#banner themes\/refind-theme-draculawave\/icons\/$size_big-$size_small\/bg$theme_path.png/banner themes\/refind-theme-draculawave\/icons\/$size_big-$size_small\/bg$theme_path.png/" theme.conf
 sed -i "s/#selection_big themes\/refind-theme-draculawave\/icons\/$size_big-$size_small\/selection$theme_path-big.png/selection_big themes\/refind-theme-draculawave\/icons\/$size_big-$size_small\/selection$theme_path-big.png/" theme.conf
 sed -i "s/#selection_small themes\/refind-theme-draculawave\/icons\/$size_big-$size_small\/selection$theme_path-small.png/selection_small themes\/refind-theme-draculawave\/icons\/$size_big-$size_small\/selection$theme_path-small.png/" theme.conf
 cd ..
@@ -158,7 +158,7 @@ echo " - [DONE]"
 #Edit refind.conf - add new theme
 echo -n "Updating refind.conf"
 echo "
-# Load rEFInd theme Regular
+# Load rEFInd theme Draculawave
 include themes/refind-theme-draculawave/theme.conf" | tee -a "${refind_dir}"/refind.conf &> /dev/null
 echo " - [DONE]"
 
@@ -178,5 +178,5 @@ case "$del_confirm" in
         ;;
 esac
 
-echo "Thank you for installing rEFInd theme Regular."
+echo "Thank you for installing rEFInd theme   D R A C U L A W A V E  ."
 echo "NOTE: If you're not getting your full resolution or have color issues then try disabling the CSM in your UEFI settings."
