@@ -91,7 +91,7 @@
      id="layer3"
      inkscape:label="Layer 3">
     <path
-       style="fill:#f2f2f2;fill-opacity:1;stroke:none;stroke-width:16;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#f8f8f2;fill-opacity:1;stroke:none;stroke-width:16;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 76,34 A 18,18 0 0 0 58,52 l 0,10 -10,0 a 4,4 0 0 0 -4,4 4,4 0 0 0 4,4 l 10,0 0,10 a 10,10 0 0 1 -10,9.998047 10,10 0 0 1 -7.050781,-2.917969 4,4 0 0 0 -0.01367,-0.01563 4,4 0 0 0 -5.65625,0 4,4 0 0 0 0,5.65625 4,4 0 0 0 0.25,0.228516 A 18,18 0 0 0 48,98 18,18 0 0 0 66,80 l 0,-10 10,0 a 4,4 0 0 0 4,-4 4,4 0 0 0 -4,-4 l -10,0 0,-10 a 10,10 0 0 1 10,-9.998047 10,10 0 0 1 7.064453,2.933594 l 0.0059,-0.0059 a 4,4 0 0 0 5.65625,0 4,4 0 0 0 0,-5.65625 4,4 0 0 0 -0.09961,-0.09375 18,18 0 0 0 -0.08789,-0.0918 A 18,18 0 0 0 76,34 Z"
        id="path4266-9"
        inkscape:connector-curvature="0" />
